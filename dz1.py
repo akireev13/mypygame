@@ -9,6 +9,7 @@ screen_height = 600
 
 black = (0, 0, 0)
 white = (255, 255, 255)
+blue = (0, 0, 255)
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('ball')
@@ -38,10 +39,10 @@ while True:
 
     screen.fill(black)
 
-    pygame.draw.line(screen, white, (screen_width // 2, screen_height // 2), (int(x), int(y)), 2)
+    pygame.draw.line(screen, blue, (screen_width // 2, screen_height // 2), (int(x), int(y)), 2)
 
-    pygame.draw.circle(screen, white, (int(x), int(y)), 20)
+    pygame.draw.circle(screen, blue, (int(x), int(y)), 20)
 
     pygame.display.flip()
 
-    pygame.time.Clock().tick(60)
+    pygame.time.Clock().tick(30)
